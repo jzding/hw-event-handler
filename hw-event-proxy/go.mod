@@ -1,14 +1,14 @@
 module github.com/redhat-cne/hw-event-proxy/hw-event-proxy
 
-go 1.18
+go 1.21.3
 
 require (
 	github.com/json-iterator/go v1.1.12
 	github.com/redhat-cne/sdk-go v0.1.1-0.20230417130643-d8a16493413b
-	github.com/sirupsen/logrus v1.8.1
-	golang.org/x/net v0.8.0
-	google.golang.org/grpc v1.42.0
-	google.golang.org/protobuf v1.28.1
+	github.com/sirupsen/logrus v1.9.3
+	golang.org/x/net v0.17.0
+	google.golang.org/grpc v1.58.3
+	google.golang.org/protobuf v1.31.0
 )
 
 require (

@@ -75,9 +75,6 @@ undeploy:update-image
 deploy-amq:update-image redfish-config label-node
 	$(KUSTOMIZE) build ./manifests/amq-installer | kubectl apply -f -
 	kubectl -n amq-router wait --for condition=available --timeout=60s deployment/amq-router
-	$(KUSTOMIZE) build ./manifests/ns | kubectl apply -f -
-	$(KUSTOMIZE) build ./manifests/layers/proxy-amq | kubectl apply -f -
-	$(KUSTOMIZE) build ./manifests/layers/consumer-amq | kubectl apply -f -
 
 undeploy-amq:update-image
 	$(KUSTOMIZE) build ./manifests/layers/consumer-amq | kubectl delete -f - | true
